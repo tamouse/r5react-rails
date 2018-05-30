@@ -7,7 +7,7 @@ Add `webpacker` and `react-rails` gems to `Gemfile`
 Installs:
 
 - `rake webpacker:install`
-- `rake webpacker:instal:react`
+- `rake webpacker:install:react`
 - `rails g react:install`
 
 Generated:
