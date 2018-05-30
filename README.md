@@ -1,24 +1,23 @@
-# README
+# Rails 5 + webpacker + react-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Start off with simply `rails new r5react-rails -d postgresql --no-rc`
 
-Things you may want to cover:
+Add `webpacker` and `react-rails` gems to `Gemfile`
 
-* Ruby version
+Installs:
 
-* System dependencies
+- `rake webpacker:install`
+- `rake webpacker:instal:react`
+- `rails g react:install`
 
-* Configuration
+Generated:
 
-* Database creation
+- `rails g react:component HelloWorld greeting:string`
+- `rails g controller Static hello_world`
 
-* Database initialization
+Edited `app/views/static/hello_world.html.erb`, added:
 
-* How to run the test suite
+    <%= javascript_pack_tag 'application' %>
+    <%= react_component("HelloWorld", { greeting: "Hello, World!" } )%>
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+and it Works!
